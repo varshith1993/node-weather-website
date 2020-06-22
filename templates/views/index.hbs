@@ -33,7 +33,7 @@ weatherreport.addEventListener('submit', (e) => {
     e.preventDefault()
     const mainval = valinput.value
     debugger
-      fetch('http://localhost:3000/weather?address='+mainval).then((response) => {
+      fetch('/weather?address='+mainval).then((response) => {
             response.json().then((data) => {
                 if(data.error){
                     message1.textContent = data.error

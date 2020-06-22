@@ -5,6 +5,8 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+const port = process.env.port || 3000
+
 app.set('view engine', 'hbs');
 
 app.set('views', path.join(__dirname, '../templates/views'));
@@ -89,6 +91,6 @@ app.get('/help/*', (req,res) => {
   })
 })
 
-app.listen(3000, () => {
-  console.log('port listening on 3000')
+app.listen(port, () => {
+  console.log('port listening on ' + port)
 })
