@@ -22,6 +22,7 @@ app.get('',  (req,res) => {
   })
 })
 
+console.log('cgcghcgh')
 
 app.get('/about', (req,res) => {
   res.render('about', {
